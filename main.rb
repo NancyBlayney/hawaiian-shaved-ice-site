@@ -29,9 +29,9 @@ post '/contact' do
 
 
 	mail = SendGrid::Mail.new do |m|   
-		m.to = @email   
-		m.from = 'nblayney@edisto.cofc.edu'   
-		m.subject = 'Hello Me!'   
+		m.to = 'nblayney@g.cofc.edu'   
+		m.from = @email   
+		m.subject = "Inquiry for Darin's Hawaiian Shaved Ice"   
 		m.text = @message 
 	end
 
