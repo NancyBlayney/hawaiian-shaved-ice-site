@@ -30,12 +30,18 @@
 <body>
 
   <div class="container">
+    <div class="row" style="background-color: white">
+      <div class="twelve columns" style="text-align: right; background-color: white; padding-top: 30px; padding-bottom: 30px">
+        <a class="button" href="/">Home</a>
+        <a class="button" href="/about">About</a>
+        <a class="button" href="/photos">Photos</a>
+        <a class="button" href="/contact">Contact</a>
+      </div>
+    </div>
     <div class="row">
-      <div class="seven columns">
-      </div>
-      <div class="five columns" style="float:right" >
-        nav bar here
-      </div>
+
+      <%= yield %>
+
     </div>
   </div>
 
