@@ -18,7 +18,6 @@ get '/contact' do
 end
 
 post '/contact' do
-	puts "MY PARAMS ARE" + params.inspect
 	@email = params[:email]
 	@message = params[:message]
 
