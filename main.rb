@@ -21,7 +21,6 @@ post '/contact' do
 	puts "MY PARAMS ARE" + params.inspect
 	@email = params[:email]
 	@message = params[:message]
-	erb :about
 
 	client = SendGrid::Client.new do |c|   
 		c.api_key = ENV['SENDGRID_API_KEY'] 
@@ -38,7 +37,12 @@ post '/contact' do
 	res = client.send(mail) 
 	puts res.code 
 	puts res.body
+
+	redirect '/'
+
 end
+
+
 
 
 
